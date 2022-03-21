@@ -1,0 +1,44 @@
+1 - Login attempt using correct e-mail and password
+		Given I am in the login screen from the tribal app 
+		When inserting in the e-mail input field an address registered in the database
+		And inserting in the password input field the corresponding data to the e-mail entered
+		And clicking in the button "SIGN IN"
+		Then I should access the user initial screen successfully
+
+2 - Login attempt using e-mail not registered in the database
+		Given I am in the login screen from the tribal app 
+		When inserting in the e-mail input field an address not registered in the database
+		And filling the password input field
+		And clicking in the button "SIGN IN"
+		Then it should exhibit an error message in red color below the password input field
+
+3 - Login attempt using password that don't corresponding e-mail
+		Given I am in the login screen from the tribal app 
+		When inserting in the e-mail input field an address registered in the database
+		And inserting in the password input field a not corresponding data to the e-mail entered
+		And clicking in the button "SIGN IN"
+		Then it should exhibit an error message in red color below the password input field
+
+4 - Login attempt using empty e-mail input field
+		Given I am in the login screen from the tribal app
+		When not filling the e-mail input field
+		And filling the password input field
+		And clicking in the button "SIGN IN"
+		Then it should exhibit an error message in red color below the password input field
+
+5 - Login attempt using empty password input field
+		Given I am in the login screen from the tribal app
+		When filling the e-mail input field
+		And not filling the password input field
+		And clicking in the button "SIGN IN"
+		Then it should exhibit an error message in red color below the password input field
+
+6 - Attempt to insert e-mail using more than 100 characters
+		Given I am in the login screen from the tribal app
+		When I am filling the e-mail input field 
+		Then it should not be allowed more than 100 characters
+
+7 - Attempt to insert password using more than 50 characters
+		Given I am in the login screen from the tribal app
+		When I am filling the password input field 
+		Then it should not be allowed more than 50 characters

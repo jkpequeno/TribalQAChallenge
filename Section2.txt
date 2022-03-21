@@ -1,0 +1,159 @@
+1 - Post: correct data
+	{
+		"name": "Jordan",
+		"petType": "dog",
+		"age": 1,
+		"race": "Golden Retriever"
+	}
+	
+2 - Post: name data bigger than 100 characters
+	{
+		"name": "Jordannnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn",
+		"petType": "dog",
+		"age": 1,
+		"race": "Golden Retriever"
+	}
+	
+3 - Post: name data different from string
+	{
+		"name": 1,
+		"petType": "dog",
+		"age": 1,
+		"race": "Golden Retriever"
+	}
+	
+4 - Post: name data that have special characters
+	{
+		"name": "@*&)*&%(@$",
+		"petType": "dog",
+		"age": 1,
+		"race": "Golden Retriever"
+	}
+	
+5 - Post: pet type data bigger than 50 characters
+	{
+		"name": "Jordan",
+		"petType": "doggggggggggggggggggggggggggggggggggggggggggggggggg",
+		"age": 1,
+		"race": "Golden Retriever"
+	}
+	
+6 - Post: pet type data different from string
+	{
+		"name": "Jordan",
+		"petType": 1,
+		"age": 1,
+		"race": "Golden Retriever"
+	}
+	
+7 - Post: pet type data that have special characters
+	{
+		"name": "Jordan",
+		"petType": "@*&)*&%(@$",
+		"age": 1,
+		"race": "Golden Retriever"
+	}
+	
+8 - Post: age data different from integer
+	{
+		"name": "Jordan",
+		"petType": "dog",
+		"age": "blue",
+		"race": "Golden Retriever"
+	}
+	
+9 - Post: unlikely age data 
+	{
+		"name": "Jordan",
+		"petType": "dog",
+		"age": 150,
+		"race": "Golden Retriever"
+	}
+	
+10 - Post: race data bigger than 50 characters
+	{
+		"name": "Jordan",
+		"petType": 1,
+		"age": "blue",
+		"race": "Golden Retrieverrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr"
+	}
+	
+11 - Post: race data different from string
+	{
+		"name": "Jordan",
+		"petType": 1,
+		"age": "blue",
+		"race": 1
+	}
+	
+12 - Post: race data that have special characters
+	{
+		"name": "Jordan",
+		"petType": 1,
+		"age": "blue",
+		"race": "%%(#*¨&*#)&¨#$"
+	}
+	
+13 - Post: empty name data 	
+	{
+		"name": "",
+		"petType": "dog",
+		"age": 1,
+		"race": "Golden Retriever"
+	}
+	
+14 - Post: empty pet type data
+	{
+		"name": "Jordan",
+		"petType": "",
+		"age": 1,
+		"race": "Golden Retriever"
+	}
+	
+15 - Post: empty age data
+	{
+		"name": "Jordan",
+		"petType": "dog",
+		"age": ,
+		"race": "Golden Retriever"
+	}
+	
+16 - Post: empty race data
+	{
+		"name": "Jordan",
+		"petType": "dog",
+		"age": 1,
+		"race": ""
+	}
+	
+Considering that API searchs using name or ID data
+
+17 - Get: search using correct ID 
+	{
+		"id": "123456"
+	}
+	
+18 - Get: search using correct name
+	{
+		"name": "Jordan"
+	}
+
+19 - Get: search using ID that not registered in database
+	{
+		"id": "1234"
+	}
+	
+20 - Get: search using name that not registered in database
+	{
+		"name": "Rex"
+	} 
+	
+21 - Get: search using ID different from string
+	{
+		"id": 123456
+	}
+	
+22 - Get: search using name different from string
+	{
+		"name": 123456
+	} 
