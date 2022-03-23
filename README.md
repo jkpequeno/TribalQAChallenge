@@ -24,3 +24,5 @@
   - #### Section 3: create automated test scripts, using the automation tool that I choose, to test the following page:
   <img align="center" src="https://github.com/jkpequeno/TribalQAChallenge/blob/main/TribalCurrentJobOpenings.png"></img>
   #### <t> The automated test scripts were developed in the eclipse IDE, using Java language and Selenium with Cucumber. To run the automated test scripts, it will be necessary to have an IDE with java language compatibillity and Cucumber Extension. The archives are in the Section3_UI folder.
+  #### <t> IMPORTANT: When open the project, please change the path of the .exe chromedriver archive to path of your computer:
+<p align="center">System.setProperty("webdriver.chrome.driver", "yourPathHere\chromedriver.exe");</p>
